@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal 💕</title>
+  <style>
+    body {
+      background-color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #d63384;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    .no {
+      background-color: #6c757d;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Do you love me, Tanisha? 🥺💕</h1>
+  <div class="buttons">
+    <button class="yes" onclick="yesClicked()">Yes 💖</button>
+    <button class="no" onmouseover="moveNo()">No 😅</button>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center;">
+          <img src="https://media.tenor.com/oq1FJfT5D4kAAAAM/love-bear.gif" width="200"><br>
+          <h2>Hehehehe, I knew it! Sorry Tanisha, I love you a lot 😘</h2>
+        </div>
+      `;
+    }
+
+    function moveNo() {
+      let btn = document.querySelector(".no");
+      let x = Math.floor(Math.random() * (window.innerWidth - 100));
+      let y = Math.floor(Math.random() * (window.innerHeight - 100));
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
